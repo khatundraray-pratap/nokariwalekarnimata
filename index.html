@@ -1,172 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>श्री सात बहनों का दरबार - मंदिर एवं पूजा आरती</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #fcf8f2;
-            color: #333;
-        }
-        header {
-            background-color: #8b0000;
-            color: #fff;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #ff2d00;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #f7e0a3;
-        }
-        nav {
-            background-color: #5a0000;
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0.8rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .intro-section {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 1.5rem;
-        }
-        .card-content h3 {
-            color: #8b0000;
-            margin-bottom: 0.5rem;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                margin: 5px 0;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>नौकरी वाले करणी माता- श्री खटुन्दरा राय</title>
+<meta name="description" content="नौकरी वाले करणी माता- श्री खटुन्दरा राय मंदिर, खटुन्दरा, खण्डेला, सीकर, राजस्थान">
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,'Noto Sans Devanagari',sans-serif;background:#fff8ec;color:#38251b;line-height:1.6}
+header{text-align:center;background:#700d0d;color:#fff2cb;padding:24px 12px;border-bottom:4px solid #d9b45d}
+header h1{margin:8px auto;max-width:950px;color:#ffe08a;font-size:clamp(25px,5vw,42px);line-height:1.35}
+header p{margin:4px}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;background:#4b0808;padding:10px}
+nav a{color:white;text-decoration:none;padding:6px 10px;border-radius:16px}
+main{max-width:1150px;margin:auto;padding:14px}
+.gallery{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:12px;align-items:stretch}
+figure{margin:0;border:3px solid #d9b45d;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 3px 12px #0001}
+figure img{display:block;width:100%;height:320px;object-fit:cover}
+figcaption{background:#780f0f;color:#fff;text-align:center;padding:8px;font-weight:bold}
+.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+.card{background:white;border:1px solid #e4c783;border-radius:10px;padding:14px}
+.card h2{font-size:20px;background:#780f0f;color:white;padding:8px;border-radius:6px;margin:0 0 10px}
+.card p{margin:7px 0}
+.puja{display:grid;grid-template-columns:1fr 170px;gap:14px;align-items:center;margin-top:16px;padding:12px;background:#fff;border:1px solid #e4c783;border-radius:10px}
+.puja img{width:100%;height:190px;object-fit:cover;border:3px solid #d9b45d;border-radius:8px}
+footer{background:#4b0808;color:#fff2cb;text-align:center;padding:20px;margin-top:18px;border-top:4px solid #d9b45d}
+@media(max-width:720px){.gallery{grid-template-columns:1fr 1fr}.gallery figure:nth-child(2){grid-column:1/-1;grid-row:1}figure img{height:230px}.cards{grid-template-columns:1fr}}
+@media(max-width:420px){main{padding:8px}.gallery{gap:7px}figure img{height:185px}.puja{grid-template-columns:1fr 105px}.puja img{height:140px}}
+</style>
 </head>
 <body>
-
-    <header>
-        <h1>माँ सात बहनों का दरबार</h1>
-        <p>पावन दर्शन एवं आध्यात्मिक केंद्र</p>
-    </header>
-
-    <nav>
-        <a href="#home">मुख्य पृष्ठ</a>
-        <a href="#about">दरबार के बारे में</a>
-        <a href="#gallery">दर्शन व आरती</a>
-        <a href="#contact">संपर्क करें</a>
-    </nav>
-
-    <div class="container">
-        
-        <section id="home" class="intro-section">
-            <h2>जय माता दी</h2>
-            <p>श्री सात बहनों के पावन दरबार में आपका स्वागत है। यहाँ आपको मंदिर परिसर, पूजा-आरती और धार्मिक आयोजनों की जानकारी प्राप्त होगी।</p>
-        </section>
-
-        <section id="gallery">
-            <h2 style="text-align: center; margin-bottom: 1.5rem; color: #8b0000;">पावन दर्शन</h2>
-            <div class="gallery-grid">
-                
-                <div class="card">
-                    <img src="images/saat-behnon-ka-darbar.jpg" alt="सात बहनों का दरबार">
-                    <div class="card-content">
-                        <h3>सात बहनों का दरबार</h3>
-                        <p>मुख्य दरबार के पावन दर्शन एवं देवी माताओं का दिव्य रूप।</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="images/mandir-bahar.jpg" alt="मंदिर परिसर">
-                    <div class="card-content">
-                        <h3>मंदिर परिसर (बाहरी दृश्य)</h3>
-                        <p>मंदिर का मुख्य प्रवेश द्वार एवं शांत वातावरण।</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="images/puja-aarti.jpg" alt="पूजा एवं आरती">
-                    <div class="card-content">
-                        <h3>पूजा एवं महा आरती</h3>
-                        <p>दैनिक पूजा, अर्चना और संध्या महा आरती का भव्य दृश्य।</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 श्री सात बहनों का दरबार | सर्वाधिकार सुरक्षित</p>
-    </footer>
-
-</body>
-</html>
+<header>
+<div style="font-size:28px">॥ जय माता दी ॥ 🔱</div>
+<h1>नौकरी वाले करणी माता- श्री खटुन्दरा राय</h1>
+<p>माता रानी के पावन दरबार में आपका हार्दिक स्वागत है।</p>
+<p>खटुन्दरा, तहसील खण्डेला, जिला सीकर, राजस्थान</p>
+</header>
+<nav><a href="#photos">फोटो</a><a href="#history">मंदिर का इतिहास</a><a href="#timing">दर्शन एवं आरती</a><a href="#address">पता एवं संपर्क</a></nav>
+<main>
+<section class="gallery" id="photos">
+<figure><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCANgBgADASIAAhEBAxEB/8QAHQAAAQUBAQEBAAAAAAAAAAAABQIDBAYHCAEACf/EAFcQAAIBAwMCBAMFBgMFBQQBFQECAwAEEQUSIQYxEyJBUQdhcRQygZGhCBUjQrHBUmLRFiQz4fBDcoKS8QkXJVOisjTC0hgmRGNzgydUZLMZNnSjxNPi/8QAHAEAAQUBAQEAAAAAAAAAAAAAAwABAgQFBgcI/8QAPhEAAgICAQMCBAMHAwQBBAIDAAECAwQRIQUSMUFRBhMiYRQycSOBkaGxwdFCUuEVFjPwNAckQ2LxJTVy4v/aAAwDAQACEQMRAD8AyRmZmwfbB+lLZ1ZkC8yYwQfWk+GFIIPOPeviWjdPvbAO1X9kB+4cpEWPfglcZ5B96VDqYTI4JyM8VEurname4x6H50hUIHl9cE49KWx0FHQ3UfiMcL6CmGtkAbcY2z6kHP501pU0gmaJ1x6hvXFFPCSbdwN3saWyQGNnKrBo59qEfd+VVTqNJLG5bdtYEAqT61fWEMT4kdQW7A/Kqz1pZF2jMYUgDAGagwkSsW7khSoKsRjOPWhGvaNez3CXllKIpOxYE5Xnk8UUgiZCcswccDJohBnwxuAPoSvqKg+S9RdKmXdEy+41OWCbMcSGZG3MccHPc0d0zVft0e+5ZFuTnb7YqbrfSFsXa5gLRM45jY5z9PzqgputZZAWIIz5Tmh8o6iM6syBomjvH9vyx4BB4P60x1/1Bbvqc0NzMYZ4gMMuQ/0I9aqOj6tNZ3qktu38bWbj5VN1TVZNTu2+1onHB47j50/fpGbPpjlLiXAI6d0611/Une6kkW1wXdogNx+QJo7BqNtZ2T6dbQskTMWUucjPsT70zd9STW0X2WALDAwClYlCgj8KgNKyWog3MluWyQ5ySR9jdicQUaAGwh6NZhdPjkUA5Johqx27NgEE4KnuKGSssZESuWDDsTnFBkEPvtUKIMsFY4BX0J+VKdmkDFgpGMj3xUGSWEOpkCvtIPIp2VvEldwyemDzUSSAE0nh3xdImdwMcjOBmoFxbsJzcM3lfLsGVYgYNFrhC8ErhSRsJB+dE7M6+G+4BflOKM0jU2r6u+JHTFzu+2Q6dZ3qK0gkkCbgueWxzxz3q/wDTnULdVa3W6S/v7ZcXM8b7g59f5snPOaqaPqEaLq00a3O/vO3nU4znt9KaN9brN9tF3bfaePn475zz+dd98Lvh7o/iO2d1mvaL1NdaHpl0unT6pZ3aJd2k3gCcRmMxlZAwBGC/H071yN8Vv2Q+q/hP1XoWjajqujXt3rtjLfWqWdxIZI0ieNGVw8aFW/eLwNx9M13H8EP2f6v8MPgXquj3t+1/qN/eXOr3sLhSsMskEaiNdoG4IIxknvUe+6n+Emq3HROs6lqXTeoXOi2M1jo8k11bzQ2kFyrO4mUnG5pAcmN+D0XmqoW5Nqj0T8K8Yx7nIfX/gJ+0R0T4Zt1b1P0zOuiqfEkurS/huPs+P8TxiRlA+u2tW3Jz8sV0J8av2t+u/id8O5egdfGjfum4urW4me0tJEuZTBIrqrSGUqq5QHCj+ZrnvLbfN5h88H1rq05uV12VwJ3/9k=" alt="माता रानी का दरबार">
+<figcaption>माता रानी का पावन दरबार</figcaption>
+</figure>
+<figure><img src="data:image/jpeg;base64,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
