@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री खटूंदरा राय - नौकरी वाली करणी माता धाम</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --saffron: #FF6F00;
+            --deep-saffron: #E65100;
+            --maroon: #800000;
+            --gold: #FFD700;
+            --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            --bg-cream: #FFF9F2;
+            --text-dark: #2C1810;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar & Header */
+        .header {
+            background: linear-gradient(135deg, var(--maroon), #4A0000);
+            color: var(--gold);
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            margin-bottom: 5px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            color: #FFF;
+            letter-spacing: 1px;
+        }
+
+        .header .sub-tag {
+            background-color: var(--saffron);
+            color: white;
+            display: inline-block;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Audio & Interactive Controls */
+        .controls-bar {
+            background-color: #FFF0E0;
+            padding: 12px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #FFE0B2;
+        }
+
+        .btn {
+            background: var(--saffron);
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: var(--deep-saffron);
+            transform: translateY(-2px);
+        }
+
+        .btn-gold {
+            background: linear-gradient(45deg, #D4AF37, #FFD700);
+            color: #4A0000;
+            font-weight: bold;
+        }
+
+        /* Main Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .photo-card {
+            background: white;
+            border: 3px solid var(--gold);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .photo-card.center-card img {
+            height: 480px;
+        }
+
+        .photo-title {
+            background: var(--maroon);
+            color: var(--gold);
+            padding: 10px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            border-top: 2px solid var(--gold);
+        }
+
+        .photo-desc {
+            padding: 10px;
+            font-size: 0.95rem;
+            color: #555;
+            background-color: #FFFDF9;
+        }
+
+        /* Bottom Section Grid */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 6px solid var(--saffron);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .info-box h2 {
+            color: var(--maroon);
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            border-bottom: 2px dashed #FFCC80;
+            padding-bottom: 8px;
+        }
+
+        .info-box p {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Pujari Special Card (Bottom Right Corner) */
+        .pujari-card {
+            background: linear-gradient(145deg, #FFF5E6, #FFE0B2);
+            border: 3px solid var(--saffron);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            text-align: center;
+            position: relative;
+        }
+
+        .pujari-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .pujari-info {
+            padding: 15px;
+        }
+
+        .pujari-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--maroon);
+            margin-bottom: 5px;
+        }
+
+        .pujari-role {
+            font-size: 0.95rem;
+            color: var(--deep-saffron);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .phone-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            margin-top: 5px;
+        }
+
+        .phone-btn:hover {
+            background-color: #128C7E;
+        }
+
+        /* Prayer / Mannat Form Section */
+        .mannat-section {
+            background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .mannat-section h3 {
+            color: var(--maroon);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #CCC;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        /* Flower animation canvas */
+        #flower-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--maroon);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .footer p {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+            .photo-card.center-card img {
+                height: 380px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="flower-canvas"></canvas>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>श्री खटूंदरा राय</h1>
+        <p>नौकरी वाली करणी माता धाम</p>
+        <span class="sub-tag">जय माँ करणी - मनोकामना पूर्ण करने वाली</span>
+    </header>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+        <button class="btn" onclick="playBell()"><i class="fa-solid fa-bell"></i> मन्दिर घंटी बजाएं</button>
+        <button class="btn btn-gold" onclick="toggleFlowers()"><i class="fa-solid fa-spa"></i> पुष्प वर्षा करें</button>
+        <a href="tel:6350217094" class="btn" style="background:#25D366;"><i class="fa-solid fa-phone"></i> सीधे कॉल करें</a>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <!-- Main 3-Photo Layout Grid -->
+        <div class="layout-grid">
+            
+            <!-- LEFT: 7 Statues (Sat Bahnen) -->
+            <div class="photo-card">
+                <img src="sat_bahnen.jpg" alt="सात बहनें स्वरूप" id="img-left" onerror="this.src='https://via.placeholder.com/400x500/FF8C00/FFFFFF?text=%E0%A4%B8%E0%A4%BE%E0%A4%A4+%E0%A4%AE%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%82+(%E0%A4%B8%E0%A4%BE%E0%A4%A4+%E0%A4%AC%E0%A4%B5%E0%A4%A8%E0%A5%87)'">
+                <div class="photo-title">सात मूर्तियां (सात बहनें)</div>
+                <div class="photo-desc">माँ करणी एवं उनकी सात बहने अवतारी स्वरूप</div>
+            </div>
+
+            <!-- CENTER: Main Temple Building -->
+            <div class="photo-card center-card">
+                <img src="temple_building.jpg" alt="नौकरी वाली करणी माता मंदिर भवन" id="img-center" onerror="this.src='https://via.placeholder.com/400x600/E65100/FFFFFF?text=%E0%A4%AE%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%B0+%E0%A4%AD%E0%A4%B5%E0%A4%A8+(%E0%A4%9B%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80)'">
+                <div class="photo-title">नौकरी वाली करणी माता मुख्य मंदिर</div>
+                <div class="photo-desc">श्री खटूंदरा राय धाम - मुख्य प्रवेश द्वार एवं मंदिर भवन</div>
+            </div>
+
+            <!-- RIGHT: Single Idol of Karni Mata -->
+            <div class="photo-card">
+                <img src="karni_mata_idol.jpg" alt="नौकरी वाली करणी माता एक मूर्ति" id="img-right" onerror="this.src='https://via.placeholder.com/400x500/800000/FFFFFF?text=%E0%A4%AE%E0%A4%BE%E0%A4%81+%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A5%80+%E0%A4%A6%E0%A4%BF%E0%A4%B5%E0%A5%8D%E0%A4%AF+%E0%A4%AE%E0%A5%81%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BF'">
+                <div class="photo-title">माँ करणी दिव्य स्वरूप</div>
+                <div class="photo-desc">नौकरी वाली माता जी के पावन दर्शन</div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            
+            <!-- Left Info Details -->
+            <div class="info-box">
+                <h2>नौकरी वाली करणी माता (श्री खटूंदरा राय)</h2>
+                <p><strong>श्री खटूंदरा राय धाम</strong> में विराजित नौकरी वाली करणी माता भक्तों की मनोकामनाएं पूरी करने के लिए प्रसिद्ध हैं। यहाँ दूर-दूर से श्रद्धालु अपनी सरकारी व निजी नौकरी, करियर और जीवन की तरक्की की अर्जी लगाने आते हैं।</p>
+                <p>माँ करणी की कृपा से अनगिनत युवाओं को रोजगार और सफलता की प्राप्ति हुई है। मंदिर प्रांगण में नियमित रूप से पूजा, जोत एवं आरती का आयोजन किया जाता है।</p>
+                <br>
+                <h3 style="color: var(--maroon); font-size: 1.2rem; margin-bottom: 8px;">मुख्य आकर्षण एवं मान्यताएं:</h3>
+                <ul style="margin-left: 20px; color: #444;">
+                    <li>अखंड जोत दर्शन एवं मनोकामना अर्जी</li>
+                    <li>करियर व नौकरी की सफलता हेतु विशेष आशीर्वाद</li>
+                    <li>सात बहनें अवतारी स्वरूप के पावन दर्शन</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT BOTTOM CORNER: Pujari Card -->
+            <div class="pujari-card">
+                <img src="pujari_vasudev.jpg" alt="पुजारी वासुदेव सिंह पालावत" id="img-pujari" onerror="this.src='https://via.placeholder.com/300x350/B38728/FFFFFF?text=%E0%A4%AA%E0%A5%81%E0%A4%9C%E0%A4%BE%E0%A4%B0%E0%A5%80+%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%81%E0%A4%A6%E0%A5%87%E0%A4%B5+%E0%A4%B8%E0%A4%BF%E0%A4%82%E0%A4%B9+%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%B5%E0%A4%A4'">
+                <div class="pujari-info">
+                    <div class="pujari-name">वासुदेव सिंह पालावत</div>
+                    <div class="pujari-role">मुख्य सेवादार एवं पुजारी</div>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 8px;">पूजा, आरती एवं दर्शन जानकारी हेतु संपर्क करें</p>
+                    <a href="tel:6350217094" class="phone-btn"><i class="fa-solid fa-phone"></i> 6350217094</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Mannat / Online Arzi Form -->
+        <div class="mannat-section">
+            <h3><i class="fa-solid fa-hands-praying"></i> माँ करणी के चरणों में नौकरी की अर्जी लगाएं</h3>
+            <p style="margin-bottom: 15px; color: #555;">अपनी मनोकामना यहाँ दर्ज करें:</p>
+            <form onsubmit="submitArzi(event)">
+                <div class="form-group">
+                    <input type="text" id="devotee-name" placeholder="आपका पूरा नाम" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="devotee-city" placeholder="आपका शहर / गांव" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="devotee-wish" rows="3" placeholder="अपनी मनोकामना / प्रार्थना लिखें (उदा. प्रतियोगी परीक्षा सफलता हेतु)..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold" style="font-size: 1.1rem; padding: 10px 25px;">जय माँ करणी - अर्जी भेजें</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>श्री खटूंदरा राय - नौकरी वाली करणी माता धाम</strong></p>
+        <p>मुख्य पुजारी: वासुदेव सिंह पालावत | संपर्क: +91 6350217094</p>
+        <p style="font-size: 0.85rem; margin-top: 10px; opacity: 0.8;">© सर्वाधिकार सुरक्षित - नौकरी वाली करणी माता मंदिर</p>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // 1. Temple Bell Audio Synthesizer
+        function playBell() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                const ctx = new AudioContext();
+                
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(1200, ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(400, ctx.currentTime + 1.5);
+                
+                gain.gain.setValueAtTime(0.8, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.5);
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                osc.start();
+                osc.stop(ctx.currentTime + 1.5);
+                alert("🔔 जय माँ करणी! मंदिर की घंटी बज रही है।");
+            } catch(e) {
+                alert("🔔 जय माँ करणी!");
+            }
+        }
+
+        // 2. Flower Shower Animation Engine
+        let flowerInterval = null;
+        const canvas = document.getElementById('flower-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        let flowers = [];
+        const flowerColors = ['#FFD700', '#FF4500', '#FF1493', '#FFA500', '#FFFFFF'];
+
+        function createFlower() {
+            return {
+                x: Math.random() * canvas.width,
+                y: -10,
+                size: Math.random() * 8 + 6,
+                speedY: Math.random() * 2 + 1.5,
+                speedX: Math.random() * 1 - 0.5,
+                color: flowerColors[Math.floor(Math.random() * flowerColors.length)],
+                rotation: Math.random() * 360
+            };
+        }
+
+        function drawFlowers() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < flowers.length; i++) {
+                let f = flowers[i];
+                ctx.save();
+                ctx.translate(f.x, f.y);
+                ctx.rotate(f.rotation * Math.PI / 180);
+                ctx.fillStyle = f.color;
+                
+                // Draw petal shape
+                ctx.beginPath();
+                ctx.arc(0, 0, f.size, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.restore();
+
+                f.y += f.speedY;
+                f.x += f.speedX;
+                f.rotation += 1;
+
+                if (f.y > canvas.height) {
+                    flowers[i] = createFlower();
+                }
+            }
+            if (flowers.length > 0) {
+                requestAnimationFrame(drawFlowers);
+            }
+        }
+
+        function toggleFlowers() {
+            if (flowers.length === 0) {
+                for (let i = 0; i < 40; i++) {
+                    flowers.push(createFlower());
+                }
+                drawFlowers();
+                setTimeout(() => {
+                    flowers = [];
+                }, 8000);
+            }
+        }
+
+        // 3. Arzi Form Handler
+        function submitArzi(e) {
+            e.preventDefault();
+            const name = document.getElementById('devotee-name').value;
+            alert("जय माँ करणी " + name + " जी!\nआपकी नौकरी एवं मनोकामना की अर्जी माँ करणी के चरणों में स्वीकार हो गई है।");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
